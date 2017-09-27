@@ -8,3 +8,11 @@ $default-font: 'Raleway';
 * {
   font-family: $default-font;
 }
+
+.jumbotron {
+  text-align: center;
+  background-color: #fff;
+  h1 {
+    font-weight: 700;
+  }
+}

@@ -1,2 +1,8 @@
 * {
   font-family: "Raleway"; }
+
+.jumbotron {
+  text-align: center;
+  background-color: #fff; }
+  .jumbotron h1 {
+    font-weight: 700; }
