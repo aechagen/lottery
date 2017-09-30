@@ -10,13 +10,30 @@
 // Prizes
 
 
-var prizeOne   = [25, 42, 32, 65, 1, 13, 15, 14, 17, 20, 44, 56, 76, 23, 21, 12];
-var prizeTwo   = [25, 42, 32, 65, 2, 13, 15, 14, 17, 20, 44, 56, 76, 23, 21, 12];
-var prizeThree = [25, 42, 32, 65, 3, 13, 15, 14, 17, 20, 44, 56, 76, 23, 21, 12];
+// panda: 5
+// elsa:  
+var prizeOne   = [5, 18, 4, 16, 15, 28, 6, 7, 3, 5, 17, 24, 4, 1, 27, 5, 22, 11, "Congratulations winners!"];
+var prizeTwo   = [3, 10, 5, 28, 26, 27, 1, 8, 13, 12, 22, 5, 4, 9, 14, 19, 5, 20, "Congratulations winners!"];
+var prizeThree = [16, 5, 19, 14, 24, 23, 6, 9, 4, 5, 1, 12, 26, 3, 10, 17, 15, 21, "Congratulations winners!"];
 
-// Let's get it.
-
+// Prints prize for group one
 function getPrize() {
-  var prize = prizeOne.shift(); // Each time getPrize() runs, takes off one array until undefined. 
-  alert(prize);
+  var prize = prizeOne.shift(); 
+  $("#output").html(prize)
+}
+
+// Prints prize for group two
+function getPrizeTwo() {
+  var prizeTwoResult = prizeTwo.shift();
+  $('#outputTwo').html(prizeTwoResult);
+}
+
+// Prints prize for group three
+function getPrizeThree() {
+  var prizeThreeResult = prizeThree.shift();
+  $('#outputThree').html(prizeThreeResult);
+}
+
+function addColor(){
+  $(".list-group-item").addClass("boom");
 }

@@ -4,52 +4,140 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/animate.css">
-  <title>Lottery</title>
+  <link rel="stylesheet" href="css/jquery.fullpage.min.css">
 </head>
+  <title>Lottery</title>
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid" id="fullpage">
     <div class="jumbotron text-center">
       <h1>Lottery Time!</h1>
-      <p>Does this flex too? Nope.</p>
+      <p>Will you win?! .. Well you paid, so yes..  You will.</p>
     </div>
 
-    <div class="row">
-      <div class="col-md-6">
-        <div class="list-group">
-          <h4 class="list-group-item active">
-            Group 1:
-          </h4>
-          <button class="list-group-item list-group-item-action justify-content-between">panda_bearry
-            <span class="badge badge-default badge-pill">1</span>
-          </button>
-          <button class="list-group-item list-group-item-action justify-content-between">blueelsa
-            <span class="badge badge-default badge-pill">5</span>
-          </button>
-          
-          <button class="list-group-item list-group-item-action justify-content-between">duhkawaiipanda
-            <span class="badge badge-default badge-pill">3</span>
-          </button>
-          <button class="list-group-item list-group-item-action justify-content-between">mariakawaiistudio
-            <span class="badge badge-default badge-pill">3</span>
-          </button>
-          <button class="list-group-item list-group-item-action justify-content-between">patricia
-            <span class="badge badge-default badge-pill">3</span>
-          </button>
-          <button class="list-group-item list-group-item-action justify-content-between">chazzerae
-            <span class="badge badge-default badge-pill">4</span>
-          </button>
+    <section id="groupOne">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="list-group">
+            <div id="changeMe">
+              <h4 class="list-group-item active">
+                Group 1: Vanity Case
+              </h4>
+            </div>
+            <button class="list-group-item list-group-item-action justify-content-between">panda_bearry
+              <span class="badge badge-default badge-pill">1</span>
+            </button>
+            <button class="list-group-item list-group-item-action justify-content-between">blueelsa
+              <span class="badge badge-default badge-pill">5</span>
+            </button>
+            
+            <button class="list-group-item list-group-item-action justify-content-between">duhkawaiipanda
+              <span class="badge badge-default badge-pill">3</span>
+            </button>
+            <button class="list-group-item list-group-item-action justify-content-between">mariakawaiistudio
+              <span class="badge badge-default badge-pill">3</span>
+            </button>
+            <button class="list-group-item list-group-item-action justify-content-between">chazzerae
+              <span class="badge badge-default badge-pill">6</span>
+            </button>
+          </div> <!-- .list-group -->
+        </div> <!-- .col -->
+
+        <div class="col-md-6">
+          <div class="draw">
+            <button class="btn btn-success" onclick="getPrize();">Moon Prism Power!</button>
+            <hr>
+            <div id="output"></div>
+          </div> <!-- .draw -->
         </div>
+      </div> <!-- .row -->
+    </section> <!-- #groupOne -->
+
+    <section id="groupTwo">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="list-group">
+            <h4 class="list-group-item active">
+              Group 2: Light-Up Stage
+            </h4>
+            <button class="list-group-item list-group-item-action justify-content-between">duhkawaiipanda
+              <span class="badge badge-default badge-pill">1</span>
+            </button>
+            <button class="list-group-item list-group-item-action justify-content-between">chazzerae
+              <span class="badge badge-default badge-pill">2</span>
+            </button>
+            
+            <button class="list-group-item list-group-item-action justify-content-between">totallytida
+              <span class="badge badge-default badge-pill">14</span>
+            </button>
+            <button class="list-group-item list-group-item-action justify-content-between">ventanablanca
+              <span class="badge badge-default badge-pill">1</span>
+            </button>
+          </div> <!-- .list-group -->
+        </div> <!-- .col -->
+  
+        <div class="col-md-6">
+          <div class="draw">
+            <button class="btn btn-success" onclick="getPrizeTwo();">Stellar Fighting Power!</button>
+            <hr>
+            <div id="outputTwo"></div>
+          </div> <!-- .draw -->
+        </div>
+      </div> <!-- .row -->
+    </section> <!-- #groupTwo -->
+
+    <section id="groupThree">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="list-group">
+            <h4 class="list-group-item active">
+              Group 3: Throw Blanket
+            </h4>
+            <button class="list-group-item list-group-item-action justify-content-between">panda_bearry
+              <span class="badge badge-default badge-pill">3</span>
+            </button>
+            <button class="list-group-item list-group-item-action justify-content-between">blueelsa
+              <span class="badge badge-default badge-pill">5</span>
+            </button>
+            
+            <button class="list-group-item list-group-item-action justify-content-between">totallytida
+              <span class="badge badge-default badge-pill">7</span>
+            </button>
+            <button class="list-group-item list-group-item-action justify-content-between">duhkawaiipanda
+              <span class="badge badge-default badge-pill">1</span>
+            </button>
+            <button class="list-group-item list-group-item-action justify-content-between">ventanablanca
+              <span class="badge badge-default badge-pill">2</span>
+            </button>
+          </div> <!-- .list-group -->
+        </div> <!-- .col -->
+  
+        <div class="col-md-6">
+          <div class="draw">
+            <button class="btn btn-success" onclick="getPrizeThree();">Mercury Star Power!</button>
+            <hr>
+            <div id="outputThree"></div>
+          </div> <!-- .draw -->
+        </div> <!-- .col -->
+      </div> <!-- .row -->
+    </section> <!-- #groupThree -->
+
+    <section id="end">
+      <div class="jumbotron">
+        <h1>Thanks for playing!</h1>
+        <img src="img/chibi.jpg" alt="Chibi Sailor Moon">
       </div>
-    </div>
+    </section>
   </div> <!-- .container -->
   
   <!-- Loading Bootstrap.js/jQuery  -->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.fullpage.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

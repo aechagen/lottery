@@ -1,6 +1,7 @@
 // Define variables
 
 $default-font: 'Raleway';
+$luna-purple: #2a2a57;
 
 
 // Get some.
@@ -9,10 +10,70 @@ $default-font: 'Raleway';
   font-family: $default-font;
 }
 
+body {
+  background: url('../img/background.jpg') center center fixed;
+}
+
+.list-group-item {
+  border-radius: 3px;
+}
+
+.btn {
+  background-color: #8372ba;
+  border: $luna-purple;
+}
+
 .jumbotron {
   text-align: center;
   background-color: #fff;
   h1 {
     font-weight: 700;
+    color: $luna-purple;
   }
+}
+
+.draw {
+  text-align: center;
+}
+
+.boom {
+  background-color: #8372ba;
+}
+.fa {
+  font-size: 56px;
+}
+
+#output {
+  margin: 20px;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(238, 191, 234, 0.86);
+  border-radius: 10px;
+  font-size: 60px;
+  color: white;
+}
+
+#outputTwo {
+  margin: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(238, 191, 234, 0.86);
+  border-radius: 10px;
+  font-size: 60px;
+  color: white;
+}
+
+#outputThree {
+  margin: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(238, 191, 234, 0.86);
+  border-radius: 10px;
+  font-size: 60px;
+  color: white;
+}
+section {
+ height: 100vh;
 }
